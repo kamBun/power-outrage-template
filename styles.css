@@ -7,6 +7,7 @@
 
   :root {
     --white-text : #fff;
+    --card-bg-color : #000;
   }
   
   body {
@@ -14,6 +15,7 @@
     height: 100%;
     --hue: 100;
     background:linear-gradient(90deg, hsl(var(--hue), 100%, 40%), hsl(var(--hue), 100%, 18%));
+    color: var(--white-text);
   }
 
   .container {
@@ -40,4 +42,50 @@
   .card-container {
     width: 100%;
     position: relative;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .card {
+    width: 100%;
+    position: relative;
+    background-color: var(--card-bg-color);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    --status-color: red;
+
+  }
+
+  .card .description {
+    flex: 6;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card .timer {
+   flex: 3;
+   justify-content: center;
+   display: flex;
+   flex-direction: column;
+  }
+
+  .card .illustration {
+    flex: 1;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .status {
+    width: 10px;
+    height: 10px;
+    background: var(--status-color);
+    border-radius: 100%;
+    box-shadow: 0 0 10px var(--status-color);
+
   }
