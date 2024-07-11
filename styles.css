@@ -57,6 +57,8 @@
     display: flex;
     justify-content: space-between;
     --status-color: red;
+    transition: all 0.8s linear;
+    cursor: pointer;
 
   }
 
@@ -88,4 +90,32 @@
     border-radius: 100%;
     box-shadow: 0 0 10px var(--status-color);
 
+  }
+
+  .card:hover {
+    background: grey;
+    transition: all 0.2s linear;
+    transform: scale(1.1);
+  }
+
+  @media print {
+
+  }
+
+  @media screen and (width < 1000px) {
+    .container {
+      padding: 0 20px;
+    }
+
+    .card {
+      display: block;
+    }
+
+    .status {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 2px;
+    }
   }
